@@ -71,5 +71,10 @@ namespace CustomBase64
         {
             B64Converter.ToBase64(inputPath, outputPath);
         }
+
+        private void convertToBinaryButton_Click(object sender, EventArgs e)
+        {
+            B64Converter.FromBase64(inputPath, outputPath);
+        }
     }
 }

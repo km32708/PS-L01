@@ -132,6 +132,7 @@
             this.convertToBinaryButton.TabIndex = 8;
             this.convertToBinaryButton.Text = "Force\r\nconvert to binary";
             this.convertToBinaryButton.UseVisualStyleBackColor = true;
+            this.convertToBinaryButton.Click += new System.EventHandler(this.convertToBinaryButton_Click);
             // 
             // saveFileDialog
             // 
