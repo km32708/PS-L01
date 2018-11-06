@@ -43,7 +43,7 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.Filter = "Dowolny plik binarny lub base64 | *.*";
+            this.openFileDialog.Filter = "Any file | *.*";
             this.openFileDialog.RestoreDirectory = true;
             this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
             // 
@@ -85,7 +85,7 @@
             this.saveFileButton.TabIndex = 3;
             this.saveFileButton.Text = "...";
             this.saveFileButton.UseVisualStyleBackColor = true;
-            this.saveFileButton.Click += new System.EventHandler(this.button1_Click);
+            this.saveFileButton.Click += new System.EventHandler(this.saveFileButton_Click);
             // 
             // inputFileLabel
             // 
@@ -111,8 +111,9 @@
             this.autoConvertButton.Name = "autoConvertButton";
             this.autoConvertButton.Size = new System.Drawing.Size(125, 50);
             this.autoConvertButton.TabIndex = 6;
-            this.autoConvertButton.Text = "Convert\r\nAutomatically";
+            this.autoConvertButton.Text = "Convert\r\nAutomatically\r\n(by extension)";
             this.autoConvertButton.UseVisualStyleBackColor = true;
+            this.autoConvertButton.Click += new System.EventHandler(this.autoConvertButton_Click);
             // 
             // convertToB64Button
             // 
@@ -136,13 +137,15 @@
             // 
             // saveFileDialog
             // 
+            this.saveFileDialog.Filter = "Any file | *.*";
             this.saveFileDialog.RestoreDirectory = true;
+            this.saveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog_FileOk);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 253);
+            this.ClientSize = new System.Drawing.Size(525, 253);
             this.Controls.Add(this.convertToBinaryButton);
             this.Controls.Add(this.convertToB64Button);
             this.Controls.Add(this.autoConvertButton);

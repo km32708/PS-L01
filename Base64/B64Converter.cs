@@ -148,7 +148,7 @@ namespace CustomBase64
                 byte[] inBytes = new byte[4];
                 long inLength = new FileInfo(inPath).Length;
                 int paddingLength = 0;
-                if (inLength < 1)
+                if (inLength < 1 || inLength%4!=0)
                 {
                     return false;
                 }
